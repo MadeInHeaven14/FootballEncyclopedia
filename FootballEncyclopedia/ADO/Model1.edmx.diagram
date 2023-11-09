@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="41199ed1b8684347962351a596552e3a" Name="Diagram1">
+        <EntityTypeShape EntityType="EncyclopediaModel.City" Width="1.5" PointX="3" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EncyclopediaModel.Club" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EncyclopediaModel.Country" Width="1.5" PointX="0.75" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EncyclopediaModel.Employment" Width="1.5" PointX="0.75" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="EncyclopediaModel.EuroLeague" Width="1.5" PointX="3" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="EncyclopediaModel.EuroTrophy" Width="1.5" PointX="5.25" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EncyclopediaModel.EuroTrophy_Club" Width="1.5" PointX="7.5" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EncyclopediaModel.League" Width="1.5" PointX="3" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EncyclopediaModel.Manager" Width="1.5" PointX="3" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EncyclopediaModel.Role" Width="1.5" PointX="7.75" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="EncyclopediaModel.Stadium" Width="1.5" PointX="3" PointY="15.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="EncyclopediaModel.sysdiagrams" Width="1.5" PointX="9.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EncyclopediaModel.Trophy" Width="1.5" PointX="5.25" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EncyclopediaModel.Trophy_Club" Width="1.5" PointX="7.5" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EncyclopediaModel.User" Width="1.5" PointX="10" PointY="9.5" IsExpanded="true" />
+        <AssociationConnector Association="EncyclopediaModel.FK_City_Country" ManuallyRouted="false" />
+        <AssociationConnector Association="EncyclopediaModel.FK_Club_City" ManuallyRouted="false" />
+        <AssociationConnector Association="EncyclopediaModel.FK_Club_EuroLeague" ManuallyRouted="false" />
+        <AssociationConnector Association="EncyclopediaModel.FK_Club_League" ManuallyRouted="false" />
+        <AssociationConnector Association="EncyclopediaModel.FK_Club_Manager" ManuallyRouted="false" />
+        <AssociationConnector Association="EncyclopediaModel.FK_Club_Stadium" ManuallyRouted="false" />
+        <AssociationConnector Association="EncyclopediaModel.FK_EuroTrophy_Club_Club" ManuallyRouted="false" />
+        <AssociationConnector Association="EncyclopediaModel.FK_Trophy_Club_Club" ManuallyRouted="false" />
+        <AssociationConnector Association="EncyclopediaModel.FK_League_Country" ManuallyRouted="false" />
+        <AssociationConnector Association="EncyclopediaModel.FK_Manager_Employment" ManuallyRouted="false" />
+        <AssociationConnector Association="EncyclopediaModel.FK_EuroTrophy_EuroLeague" ManuallyRouted="false" />
+        <AssociationConnector Association="EncyclopediaModel.FK_EuroTrophy_Club_EuroTrophy" ManuallyRouted="false" />
+        <AssociationConnector Association="EncyclopediaModel.FK_Trophy_League" ManuallyRouted="false" />
+        <AssociationConnector Association="EncyclopediaModel.FK_User_Role" ManuallyRouted="false" />
+        <AssociationConnector Association="EncyclopediaModel.FK_Trophy_Club_Trophy" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
