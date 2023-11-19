@@ -38,6 +38,7 @@ namespace FootballEncyclopedia
         private void btn_SignIn_Click(object sender, RoutedEventArgs e)
         {
             int flag = 0;
+            int role = 2;
             if (!string.IsNullOrEmpty(tb_Login.Text) || !string.IsNullOrEmpty(tb_Password.Password))
             {
                 var user = DBConnection.connection.User.Where(x => x.Login == tb_Login.Text).FirstOrDefault();
@@ -45,6 +46,12 @@ namespace FootballEncyclopedia
                 {
                     flag = 2;
                 }
+
+                if (user != null && user.ID_Role == 1)
+                {
+                    role = 1;
+                }
+                UserService.user = user;
             }
             else
             {
@@ -54,7 +61,16 @@ namespace FootballEncyclopedia
             switch (flag)
             {
                 case 0:
-                    MessageBox.Show("ОК");
+                    if (role == 1)
+                    {
+                        
+                    }
+                    else
+                    {
+                        MainWindowUser win = new MainWindowUser();
+                        win.Show();
+                        this.Close();
+                    }
                     break;
                 case 1:
                     MessageBox.Show("Введите все данные!");

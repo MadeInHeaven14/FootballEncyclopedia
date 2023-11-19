@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FootballEncyclopedia.ADO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,5 +9,6 @@ namespace FootballEncyclopedia.Services
 {
     internal class UserService
     {
+        public static User user;
     }
 }

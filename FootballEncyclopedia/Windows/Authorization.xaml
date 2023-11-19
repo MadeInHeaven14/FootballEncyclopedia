@@ -8,7 +8,7 @@
         Title="Авторизация" Height="450" Width="800">
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="https://catherineasquithgallery.com/uploads/posts/2021-02/1613259700_23-p-sinii-futbolnii-fon-28.jpg" Stretch="UniformToFill"/>
+            <ImageBrush ImageSource="C:\Users\Артур\source\repos\FootballEncyclopedia\FootballEncyclopedia\Images\Background\b1.jpg" Stretch="UniformToFill"/>
         </Grid.Background>
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
             <TextBlock Text="Добро пожаловать!" Foreground="White" FontSize="30" Margin="0,0,0,20" FontWeight="Bold" TextAlignment="Center"/>
