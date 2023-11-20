@@ -137,8 +137,14 @@
     <Compile Include="Services\ClubService.cs" />
     <Compile Include="Services\DBConnection.cs" />
     <Compile Include="Services\UserService.cs" />
+    <Compile Include="Windows\AddClubWindow.xaml.cs">
+      <DependentUpon>AddClubWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\ClubWindow.xaml.cs">
       <DependentUpon>ClubWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\MainWindowAdmin.xaml.cs">
+      <DependentUpon>MainWindowAdmin.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\MainWindowUser.xaml.cs">
       <DependentUpon>MainWindowUser.xaml</DependentUpon>
@@ -146,6 +152,10 @@
     <Compile Include="Windows\Registration.xaml.cs">
       <DependentUpon>Registration.xaml</DependentUpon>
     </Compile>
+    <Page Include="Windows\AddClubWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Windows\Authorization.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -159,6 +169,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Windows\ClubWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\MainWindowAdmin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -196,6 +210,7 @@
     <None Include="ADO\Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
     </None>
+    <None Include="Images\Background\b4.webp" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

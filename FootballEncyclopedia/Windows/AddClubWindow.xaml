@@ -1,0 +1,124 @@
+﻿<Window x:Class="FootballEncyclopedia.Windows.AddClubWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FootballEncyclopedia.Windows"
+        mc:Ignorable="d"
+        Title="Добавление клуба" Height="1080" Width="1920" WindowState="Maximized">
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <!-- Заголовок страницы -->
+            <TextBlock Text="Добавление нового клуба" FontSize="30" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,20"/>
+
+            <!-- Форма для ввода данных о клубе -->
+            <Grid Grid.Row="1" Margin="50">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,10">
+                    <TextBlock Text="Название клуба:" VerticalAlignment="Center" Width="150"/>
+                    <TextBox x:Name="tb_ClubName" Width="300" VerticalAlignment="Center" Margin="10,0"/>
+                </StackPanel>
+
+                <StackPanel Grid.Row="3" Orientation="Horizontal" Margin="0,10">
+                    <TextBlock Text="Логотип:" VerticalAlignment="Center" Width="150"/>
+                    <Button x:Name="btn_LoadLogo" IsEnabled="False" Content="Загрузить" Width="150" VerticalAlignment="Center" Margin="10,0" Click="btn_LoadLogo_Click"/>
+                    <Label x:Name="lb_LogoName"/>
+                </StackPanel>
+
+                <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="0,10">
+                    <TextBlock Text="Название стадиона:" VerticalAlignment="Center" Width="150"/>
+                    <TextBox x:Name="tb_StadiumName" Width="300" VerticalAlignment="Center" Margin="10,0"/>
+                </StackPanel>
+
+                <StackPanel Grid.Row="4" Orientation="Horizontal" Margin="0,10">
+                    <TextBlock Text="Стадион:" VerticalAlignment="Center" Width="150"/>
+                    <Button x:Name="btn_LoadStadium" IsEnabled="False" Content="Загрузить" Width="150" VerticalAlignment="Center" Margin="10,0" Click="btn_LoadStadium_Click"/>
+                    <Label x:Name="lb_StadiumName"/>
+                </StackPanel>
+
+                <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,10">
+                    <TextBlock Text="Лига:" VerticalAlignment="Center" Width="150"/>
+                    <ComboBox x:Name="cb_Leagues" Width="200" VerticalAlignment="Center" Margin="10,0" SelectionChanged="cb_Leagues_SelectionChanged"/>
+                </StackPanel>
+
+                <StackPanel Grid.Row="5" Orientation="Horizontal" Margin="0,10">
+                    <TextBlock Text="Информация о клубе:" VerticalAlignment="Top" Width="150"/>
+                    <TextBox x:Name="tb_Description" Width="600" Height="200" VerticalScrollBarVisibility="Auto" Margin="10,0" TextWrapping="Wrap"/>
+                </StackPanel>
+
+                <StackPanel Grid.Row="6" Orientation="Horizontal" Margin="0,10">
+                    <TextBlock Text="Ссылка на сайт клуба:" VerticalAlignment="Center" Width="150"/>
+                    <TextBox x:Name="tb_Site" Width="300" VerticalAlignment="Center" Margin="10,0"/>
+                </StackPanel>
+            </Grid>
+
+            <!-- Кнопки "Назад" и "Создать клуб" -->
+            <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20">
+                <Button x:Name="btn_Back" Content="Назад" Width="150" Height="50" Margin="10" Foreground="White" FontWeight="Bold" Click="btn_Back_Click">
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="Background" Value="#4CAF50"/>
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="Button">
+                                        <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="1">
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </Border>
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="Background" Value="#388E3C"/>
+                                            </Trigger>
+                                            <Trigger Property="IsPressed" Value="True">
+                                                <Setter Property="Background" Value="#1B5E20"/>
+                                            </Trigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </Button.Style>
+                </Button>
+                <Button x:Name="btn_AddClub" Content="Создать клуб" Width="150" Height="50" Margin="10" Foreground="White" FontWeight="Bold" Click="btn_AddClub_Click">
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="Background" Value="#4CAF50"/>
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="Button">
+                                        <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="1">
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </Border>
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="Background" Value="#388E3C"/>
+                                            </Trigger>
+                                            <Trigger Property="IsPressed" Value="True">
+                                                <Setter Property="Background" Value="#1B5E20"/>
+                                            </Trigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </Button.Style>
+                </Button>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>

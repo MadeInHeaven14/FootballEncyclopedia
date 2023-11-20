@@ -5,21 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FootballEncyclopedia.Windows"
         mc:Ignorable="d"
-        Title="ClubWindow" Height="1080" Width="1920">
+        Title="ClubWindow" Height="1080" Width="1920" WindowState="Maximized">
     <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="C:\Users\Артур\source\repos\FootballEncyclopedia\FootballEncyclopedia\Images\Background\b4.webp" Stretch="UniformToFill"/>
+        </Grid.Background>
         <ScrollViewer>
             <Grid>
                 <Image x:Name="img_Logo" Height="140" VerticalAlignment="Top" HorizontalAlignment="Left" Width="140" Margin="25,0,0,0"/>
                 <Image x:Name="img_Country" Height="110" VerticalAlignment="Top" HorizontalAlignment="Left" Width="140" Margin="250,25,0,0"/>
                 <Label x:Name="lb_Name" Width="1000" Height="100" VerticalAlignment="Top" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold" FontSize="24"></Label>
                 <Image x:Name="img_League" Width="200" Height="200" Margin="0,138,232,753" HorizontalAlignment="Right"></Image>
-                <Label Content="Лига" FontWeight="Bold" FontSize="24" Margin="0,333,285,701" Width="92" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="57" HorizontalAlignment="Right"/>
-                <Image x:Name="img_Stadium" Width="400" Height="400" Margin="0,346,130,345" HorizontalAlignment="Right"></Image>
-                <Label Content="Стадион:" FontWeight="Bold" FontSize="24" Margin="0,675,331,359" Width="120" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="57" HorizontalAlignment="Right"/>
-                <Label x:Name="lb_StadiumName" Content="Название" FontWeight="Bold" FontSize="24" Margin="0,675,38,359" Width="288" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Height="57" HorizontalAlignment="Right"/>
-                <TextBlock x:Name="tb_Info" TextWrapping="Wrap" Margin="5,138,707,208" FontSize="20"></TextBlock>
+                <Label Content="Лига:" FontWeight="Bold" FontSize="24" Margin="0,333,389,701" Width="92" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="57" HorizontalAlignment="Right" Foreground="White"/>
+                <Label x:Name="lb_LeagueName" Content="Название" FontWeight="Bold" FontSize="24" Margin="0,333,31,701" Width="362" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Height="57" HorizontalAlignment="Right" Foreground="White"/>
+                <Image x:Name="img_Stadium" Width="400" Height="280" Margin="0,346,130,345" HorizontalAlignment="Right" Stretch="Fill"/>
+                <Label Content="Стадион:" FontWeight="Bold" FontSize="24" Margin="0,678,421,356" Width="120" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="57" HorizontalAlignment="Right" Foreground="White"/>
+                <Label x:Name="lb_StadiumName" Content="Название" FontWeight="Bold" FontSize="24" Margin="0,678,128,356" Width="288" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Height="57" HorizontalAlignment="Right" Foreground="White"/>
+                <TextBlock x:Name="tb_Info" TextWrapping="Wrap" Margin="5,138,707,208" FontSize="20" Foreground="White"></TextBlock>
                 <Image x:Name="img_QR" Width="200" Height="200" Margin="0,575,232,0" HorizontalAlignment="Right"/>
-                <Label Content="Сайт" FontWeight="Bold" FontSize="24" Margin="0,915,285,0" Width="110" HorizontalContentAlignment="Center" HorizontalAlignment="Right"/>
+                <Label Content="Сайт" FontWeight="Bold" FontSize="24" Margin="0,930,285,0" Width="110" HorizontalContentAlignment="Center" HorizontalAlignment="Right" Foreground="White"/>
                 <Button x:Name="btn_Back" Content="Назад" Foreground="White" Width="150" Height="80" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="50,0,0,200" FontSize="36" FontWeight="Bold" Click="btn_Back_Click">
                     <Button.Style>
                         <Style TargetType="Button">

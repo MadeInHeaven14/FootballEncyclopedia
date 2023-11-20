@@ -90,6 +90,7 @@ namespace FootballEncyclopedia.Windows
             logo.UriSource = new Uri(league.Logo);
             logo.EndInit();
             img_League.Source = logo;
+            lb_LeagueName.Content = league.Name;
         }
 
         private void GetCountry()

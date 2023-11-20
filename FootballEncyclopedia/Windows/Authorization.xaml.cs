@@ -63,7 +63,9 @@ namespace FootballEncyclopedia
                 case 0:
                     if (role == 1)
                     {
-                        
+                        MainWindowAdmin win = new MainWindowAdmin();
+                        win.Show();
+                        this.Close();
                     }
                     else
                     {
